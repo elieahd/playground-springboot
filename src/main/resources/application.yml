@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: playground
+  threads:
+    virtual:
+      enabled: true
