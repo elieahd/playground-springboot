@@ -10,3 +10,5 @@
 * Clone repository
 * Make sure you are running Java 25
 * Build the code with `mvn prettier:write clean install`
+
+API documentation is accessible on this link : `http://localhost:8080/swagger-ui/index.html`
