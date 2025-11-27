@@ -23,15 +23,14 @@ public class BookInventory {
 
   public Book save(Book book) {
     if (book.id() == null) {
-      book =
-        new Book(
-          UUID.randomUUID(),
-          book.title(),
-          book.authorName(),
-          book.publicationDate(),
-          book.categoryId(),
-          book.price()
-        );
+      book = new Book(
+        UUID.randomUUID(),
+        book.title(),
+        book.authorName(),
+        book.publicationDate(),
+        book.categoryId(),
+        book.price()
+      );
     }
     books.put(book.id(), book);
     return book;

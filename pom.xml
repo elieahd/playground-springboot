@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.5.7</version>
+        <version>4.0.0</version>
         <relativePath/>
     </parent>
 
@@ -16,11 +16,13 @@
 
     <properties>
         <java.version>25</java.version>
-        <maven.compiler.source>25</maven.compiler.source>
-        <maven.compiler.target>25</maven.compiler.target>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring.doc.version>2.8.14</spring.doc.version>
+        <spring.doc.version>3.0.0</spring.doc.version>
         <maven.plugin.compiler.version>3.14.1</maven.plugin.compiler.version>
+        <maven.plugin.prettier.version>0.22</maven.plugin.prettier.version>
+        <maven.plugin.prettier.java.version>2.7.7</maven.plugin.prettier.java.version>
     </properties>
 
     <dependencies>
@@ -51,9 +53,9 @@
             <plugin>
                 <groupId>com.hubspot.maven.plugins</groupId>
                 <artifactId>prettier-maven-plugin</artifactId>
-                <version>0.16</version>
+                <version>${maven.plugin.prettier.version}</version>
                 <configuration>
-                    <prettierJavaVersion>1.5.0</prettierJavaVersion>
+                    <prettierJavaVersion>${maven.plugin.prettier.java.version}</prettierJavaVersion>
                     <printWidth>120</printWidth>
                     <tabWidth>2</tabWidth>
                     <useTabs>false</useTabs>
@@ -72,9 +74,9 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.13.0</version>
+                <version>${maven.plugin.compiler.version}</version>
                 <configuration>
-                    <release>25</release>
+                    <release>${java.version}</release>
                 </configuration>
             </plugin>
         </plugins>
